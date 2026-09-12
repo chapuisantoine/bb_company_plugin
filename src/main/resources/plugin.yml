@@ -1,0 +1,11 @@
+name: BbEnterprise
+version: '${version}'
+main: com.bbenterprise.BbEnterprise
+api-version: '1.20'
+description: BB Enterprise Plugin
+authors:
+  - bobiche
+
+commands: {}
+
+permissions: {}

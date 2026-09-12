@@ -1,0 +1,2 @@
+-- Schéma de la base bb_enterprise.
+-- Ajoute les CREATE TABLE IF NOT EXISTS ici ; chaque statement est séparé par ";".
