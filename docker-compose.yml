@@ -1,7 +1,7 @@
 services:
   mariadb:
     image: mariadb:latest
-    container_name: bb_enterprise_db
+    container_name: bb_company_db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}

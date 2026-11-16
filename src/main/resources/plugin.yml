@@ -1,8 +1,8 @@
-name: BbEnterprise
+name: BbCompany
 version: '1.0-SNAPSHOT'
-main: com.bbenterprise.BbEnterprise
+main: com.bbcompany.BbCompany
 api-version: '1.20'
-description: BB Enterprise Plugin
+description: BB Company Plugin
 authors:
   - bobiche
 
@@ -16,6 +16,6 @@ commands:
     usage: /company <create|info|list|members|whoami|disband|rename|transfer|addmember|removemember|setrankmember|refreshcraftcache>
 
 permissions:
-  bbenterprise.admin:
-    description: Acces aux commandes admin BbEnterprise
+  bbcompany.admin:
+    description: Acces aux commandes admin BbCompany
     default: op

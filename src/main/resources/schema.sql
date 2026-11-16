@@ -1,4 +1,4 @@
--- Schéma de la base bb_enterprise.
+-- Schéma de la base bb_company.
 
 CREATE TABLE IF NOT EXISTS bb_professions (
     code          VARCHAR(32)  NOT NULL PRIMARY KEY,
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS bb_shop_offers (
     FOREIGN KEY (profession_code) REFERENCES bb_professions(code)
 );
 
-CREATE TABLE IF NOT EXISTS bb_transactions (
+CREATE TABLE IF NOT EXISTS bb_shop_transactions (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     player_uuid VARCHAR(36) NOT NULL,
     profession_code VARCHAR(32) NOT NULL,

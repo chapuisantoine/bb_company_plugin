@@ -1,4 +1,4 @@
-# BB Enterprise
+# BB Company
 
 Plugin Paper/Spigot (Kotlin, Minecraft 1.20.1) qui implémente un système de métiers/économie de rôle-play, complété à terme par un mod Forge pour les items custom.
 
@@ -29,8 +29,8 @@ Le système est pensé pour que l'ajout d'un nouveau métier reste une opératio
 ## Décisions d'architecture
 
 - **Cohabitation plugin/mod** : un serveur Paper/Bukkit ne peut pas charger un mod Forge/Fabric nativement. Choix retenu : un **serveur hybride (Mohist ou Arclight, 1.20.1)**. Le plugin Bukkit/Kotlin actuel reste le foyer de toute la logique métier/économie ; un mod Forge séparé (non démarré) portera les définitions d'items custom (textures/modèles). Les joueurs devront installer ce mod côté client pour voir les vraies textures.
-- **Companies** : système maison géré par BbEnterprise (pas de dépendance à Towny/Factions/SimpleClans), avec un quota par métier configurable par company (souvent 1, mais pas forcément pour tous les métiers).
-- **Économie/argent** : déléguée à un plugin externe pas encore choisi, qui gère l'économie globale du serveur. BbEnterprise ne stocke pas les soldes lui-même ; les points d'achat/vente sont conçus derrière une interface (probablement branchée sur Vault) pour ne pas bloquer le développement en attendant ce choix.
+- **Companies** : système maison géré par BbCompany (pas de dépendance à Towny/Factions/SimpleClans), avec un quota par métier configurable par company (souvent 1, mais pas forcément pour tous les métiers).
+- **Économie/argent** : déléguée à un plugin externe pas encore choisi, qui gère l'économie globale du serveur. BbCompany ne stocke pas les soldes lui-même ; les points d'achat/vente sont conçus derrière une interface (probablement branchée sur Vault) pour ne pas bloquer le développement en attendant ce choix.
 - **Mods externes** : des mods de contenu (ex. Farmer's Delight pour la nourriture) seront ajoutés au fil de l'eau ; le mapping "produit d'un métier → item réel" doit donc rester découplé de la logique métier (voir couche `items` ci-dessous).
 
 ## Modèle de données (schema.sql, à ajouter)

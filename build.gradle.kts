@@ -43,7 +43,7 @@ tasks.jar {
     enabled = false
 }
 
-val shadePrefix = "fr.bobiche.bb_enterprise.libs"
+val shadePrefix = "fr.bobiche.bb_company.libs"
 
 tasks.shadowJar {
     archiveClassifier.set("")
