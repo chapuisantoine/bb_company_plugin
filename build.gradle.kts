@@ -39,6 +39,10 @@ tasks.build {
     dependsOn("shadowJar")
 }
 
+tasks.jar {
+    enabled = false
+}
+
 val shadePrefix = "fr.bobiche.bb_enterprise.libs"
 
 tasks.shadowJar {

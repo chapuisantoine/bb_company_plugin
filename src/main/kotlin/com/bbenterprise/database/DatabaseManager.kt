@@ -57,6 +57,9 @@ class DatabaseManager(private val plugin: BbEnterprise) {
             ?.readText()
             ?: return
 
+        val withoutComments = sql.lines()
+            .joinToString("\n") { it.substringBefore("--") }
+        
         getConnection().use { conn ->
             // Exécute chaque statement séparé par ";"
             sql.split(";")
